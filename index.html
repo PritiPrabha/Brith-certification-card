@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Birth Registration System</h1>
+            <nav class="nav">
+                <button class="nav-btn active" data-section="dashboard">Dashboard</button>
+                <button class="nav-btn" data-section="register">Register Birth</button>
+                <button class="nav-btn" data-section="records">View Records</button>
+                <button class="nav-btn" data-section="search">Search</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="section active">
+                <h2>Dashboard</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Registrations</h3>
+                        <div class="stat-number" id="reg">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>This Month</h3>
+                        <div class="stat-number" id="monthlyReg">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pending Reviews</h3>
+                        <div class="stat-number" id="pendingReviews">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Completed</h3>
+                        <div class="stat-number" id="completedRegistrations">0</div>
+                    </div>
+                </div>
+                
+                <div class="recent-registrations">
+                    <h3>Recent Registrations</h3>
+                    <div id="recentList" class="recent-list">
+                        <p class="no-data">No registrations yet</p>
+                    </div>
+                </div>
+            </section>
+
+           
+
+                   
+</body>
+</html>
