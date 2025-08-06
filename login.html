@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth Certificate Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Birth Certificate Generator</h1>
+            <p>Generate official-looking birth certificates with ease</p>
+        </header>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2>Certificate Information</h2>
+                <form id="certificateForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth:</label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeOfBirth">Time of Birth:</label>
+                            <input type="time" id="timeOfBirth" name="timeOfBirth">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="placeOfBirth">Place of Birth:</label>
+                            <input type="text" id="placeOfBirth" name="placeOfBirth" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender:</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fatherName">Father's Name:</label>
+                        <input type="text" id="fatherName" name="fatherName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motherName">Mother's Name:</label>
+                        <input type="text" id="motherName" name="motherName" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="registrationNumber">Registration Number:</label>
+                            <input type="text" id="registrationNumber" name="registrationNumber" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registrationDate">Registration Date:</label>
+                            <input type="date" id="registrationDate" name="registrationDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="issuingAuthority">Issuing Authority:</label>
+                            <input type="text" id="issuingAuthority" name="issuingAuthority" value="Department of Vital Records" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="certificateNumber">Certificate Number:</label>
+                            <input type="text" id="certificateNumber" name="certificateNumber" required>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="generateBtn" class="btn btn-primary">Generate Certificate</button>
+                        <button type="button" id="downloadBtn" class="btn btn-secondary" disabled>Download PDF</button>
+                        <button type="reset" class="btn btn-outline">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="preview-section">
+                <h2>Certificate Preview</h2>
+                <div id="certificatePreview" class="certificate-container">
+                    <div class="certificate">
+                        <div class="certificate-header">
+                            <div class="seal"></div>
+                            <h1>BIRTH CERTIFICATE</h1>
+                            <div class="authority-info">
+                                <p>DEPARTMENT OF VITAL RECORDS</p>
+                                <p>OFFICIAL DOCUMENT</p>
+                            </div>
+                        </div>
+
+                        <div class="certificate-body">
+                            <div class="cert-field">
+                                <span class="label">Full Name:</span>
+                                <span class="value" id="cert-fullName">_________________</span>
+                            </div>
+
+                            <div class="cert-row">
+                                <div class="cert-field">
+                                    <span class="label">Date of Birth:</span>
+                                    <span class="value" id="cert-dateOfBirth">_________</span>
+                                </div>
+                                <div class="cert-field">
+                                    <span class="label">Time of Birth:</span>
+                                    <span class="value" id="cert-timeOfBirth">_________</span>
+                                </div>
+                            </div>
+
+                            <div class="cert-row">
+                                <div class="cert-field">
+                                    <span class="label">Place of Birth:</span>
+                                    <span class="value" id="cert-placeOfBirth">_________________</span>
+                                </div>
+                                <div class="cert-field">
+                                    <span class="label">Gender:</span>
+                                    <span class="value" id="cert-gender">_________</span>
+                                </div>
+                            </div>
+
+                            <div class="cert-field">
+                                <span class="label">Father's Name:</span>
+                                <span class="value" id="cert-fatherName">_________________</span>
+                            </div>
+
+                            <div class="cert-field">
+                                <span class="label">Mother's Name:</span>
+                                <span class="value" id="cert-motherName">_________________</span>
+                            </div>
+
+                            <div class="cert-row">
+                                <div class="cert-field">
+                                    <span class="label">Registration No:</span>
+                                    <span class="value" id="cert-registrationNumber">_________</span>
+                                </div>
+                                <div class="cert-field">
+                                    <span class="label">Registration Date:</span>
+                                    <span class="value" id="cert-registrationDate">_________</span>
+                                </div>
+                            </div>
+
+                            <div class="cert-row">
+                                <div class="cert-field">
+                                    <span class="label">Certificate No:</span>
+                                    <span class="value" id="cert-certificateNumber">_________</span>
+                                </div>
+                                <div class="cert-field">
+                                    <span class="label">Issue Date:</span>
+                                    <span class="value" id="cert-issueDate">_________</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="certificate-footer">
+                            <div class="signature-section">
+                                <div class="signature">
+                                    <div class="signature-line"></div>
+                                    <p>Registrar Signature</p>
+                                </div>
+                                <div class="official-seal">
+                                    <div class="seal-placeholder">OFFICIAL SEAL</div>
+                                </div>
+                            </div>
+                            <div class="authority-footer">
+                                <p id="cert-issuingAuthority">Department of Vital Records</p>
+                                <p class="disclaimer">This is a computer-generated document</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,750 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+    min-height: 100vh;
+}
+
+/* Authentication Styles */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 50%, #f3e8ff 100%);
+}
+
+.auth-wrapper {
+    max-width: 400px;
+    width: 100%;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #2563eb, #3730a3);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    color: white;
+}
+
+.auth-header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.auth-form-container {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border: 1px solid #f3f4f6;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.form-label svg {
+    margin-right: 0.5rem;
+    color: #2563eb;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    background: white;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input.error {
+    border-color: #ef4444;
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: color 0.2s;
+}
+
+.password-toggle:hover {
+    color: #374151;
+}
+
+.error-message {
+    font-size: 0.75rem;
+    color: #ef4444;
+    margin-top: 0.25rem;
+    min-height: 1rem;
+}
+
+.general-error {
+    padding: 0.75rem;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.auth-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #2563eb, #3730a3);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.auth-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.auth-submit:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.auth-submit svg {
+    margin-right: 0.5rem;
+}
+
+.auth-toggle {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.auth-toggle p {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.toggle-link {
+    background: none;
+    border: none;
+    color: #2563eb;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    transition: color 0.2s;
+}
+
+.toggle-link:hover {
+    color: #1d4ed8;
+}
+
+.demo-credentials {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #dbeafe;
+    border: 1px solid #bfdbfe;
+    border-radius: 0.5rem;
+}
+
+.demo-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+}
+
+.demo-info {
+    font-size: 0.75rem;
+    color: #1e3a8a;
+    line-height: 1.4;
+}
+
+.demo-note {
+    font-size: 0.75rem;
+    color: #2563eb;
+    margin-top: 0.5rem;
+}
+
+/* Main Application Styles */
+.app-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.app-header {
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.app-icon {
+    background: #2563eb;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.app-title h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+}
+
+.app-title p {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.user-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #111827;
+}
+
+.user-email {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.logout-btn:hover {
+    color: #111827;
+    background: #f3f4f6;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.form-section {
+    position: sticky;
+    top: 2rem;
+}
+
+.form-container {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.form-header {
+    margin-bottom: 1.5rem;
+}
+
+.form-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.certificate-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.print-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #2563eb, #3730a3);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.print-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.print-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.print-btn svg {
+    margin-right: 0.5rem;
+}
+
+.form-status {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+}
+
+.status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.status-incomplete {
+    color: #f59e0b;
+    font-weight: 500;
+}
+
+.status-complete {
+    color: #10b981;
+    font-weight: 500;
+}
+
+.progress-bar {
+    height: 0.5rem;
+    background: #e5e7eb;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #f59e0b, #10b981);
+    border-radius: 0.25rem;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+/* Certificate Styles */
+.certificate-section {
+    position: sticky;
+    top: 2rem;
+}
+
+.certificate-container {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.certificate {
+    padding: 3rem 2rem;
+    background: white;
+    border: 3px solid #1e3a8a;
+    position: relative;
+}
+
+.certificate-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.official-seal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.seal-icon {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.certificate-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.title-underline {
+    width: 128px;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #f59e0b);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.official-statement {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.official-statement p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.certificate-details {
+    margin-bottom: 2rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px dotted #d1d5db;
+    padding-bottom: 0.5rem;
+}
+
+.detail-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+.detail-value {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.detail-value span {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    display: block;
+    text-align: right;
+    min-height: 1.5rem;
+}
+
+.certificate-footer {
+    border-top: 2px solid #e5e7eb;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.signature-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.signature-box {
+    text-align: center;
+}
+
+.signature-line {
+    border-bottom: 1px solid #6b7280;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signature-line span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #111827;
+}
+
+.signature-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.official-stamp {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.stamp-box {
+    display: inline-block;
+    border: 2px dashed #d1d5db;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+}
+
+.stamp-text {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.stamp-circle {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.stamp-circle span {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+.certificate-number {
+    text-align: center;
+}
+
+.certificate-number p {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Loading Animation */
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 0.5rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        margin: 0;
+        background: white;
+    }
+    
+    .app-header,
+    .form-section,
+    .print:hidden {
+        display: none !important;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .certificate-container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: none;
+        margin: 0;
+    }
+    
+    .certificate {
+        border: 3px solid #1e3a8a;
+        border-radius: 0;
+        padding: 2rem;
+        page-break-inside: avoid;
+    }
+    
+    @page {
+        size: A4;
+        margin: 0.5in;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .form-section,
+    .certificate-section {
+        position: static;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .header-right {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .certificate {
+        padding: 2rem 1rem;
+    }
+    
+    .certificate-title {
+        font-size: 1.5rem;
+    }
+    
+    .signature-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.25rem;
+    }
+    
+    .detail-value {
+        margin-left: 0;
+    }
+    
+    .detail-value span {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .form-container,
+    .certificate-container {
+        padding: 1rem;
+    }
+    
+    .certificate {
+        padding: 1.5rem 1rem;
+    }
+    
+    .auth-form-container {
+        padding: 1.5rem;
+    }
+}
